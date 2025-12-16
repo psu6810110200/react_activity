@@ -1,7 +1,17 @@
-const NoteList = () => {
+import type{ Note } from '../types';
+
+interface NoteListProps { notes: Note[]; }
+
+const NoteList = ({ notes }: NoteListProps) => {
   return (
-    <div>NoteList</div>
-  )
+    <ul>
+      {notes.map((note) => (
+        <li key={note.id}>
+          {note.text}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
-export default NoteList
+export default NoteList;
