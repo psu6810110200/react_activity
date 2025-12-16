@@ -1,3 +1,14 @@
-import { Component } from "react";
+import NoteForm from './component/NoteForm';
+import NoteList from './component/NoteList';
+import './App.css'; 
 
-<Component></Component>
+function App() {
+  return (
+    <div>
+      <NoteForm />
+      <NoteList />
+    </div>
+  );
+}
+
+export default App;
